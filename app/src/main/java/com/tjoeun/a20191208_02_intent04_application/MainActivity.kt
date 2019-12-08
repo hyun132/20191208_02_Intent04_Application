@@ -28,5 +28,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        smsBtn.setOnClickListener {
+//            누구에게 문자를 보낼지 uri로 명시
+
+            val uri = Uri.parse("smsto:${smsNumEdt.text.toString()}")
+
+            val intent = Intent(Intent.ACTION_SENDTO,uri)
+            intent.putExtra("sms_body","광고 문구 입력하자")
+            startActivity(intent)
+        }
+
+        naverBtn.setOnClickListener {
+            val uri = Uri.parse("https://naver.com")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
+        }
+
     }
 }
