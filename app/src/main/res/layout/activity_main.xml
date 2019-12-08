@@ -13,5 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="전화 걸기 직전"/>
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="실제 전화 걸기"/>
 
 </LinearLayout>

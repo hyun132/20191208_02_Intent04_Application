@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.invoke.CallSite
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,13 @@ class MainActivity : AppCompatActivity() {
             val uri = Uri.parse("tel:01051123237")
 //            어느 화면에 넘겨줄지 명시
             val intent = Intent(Intent.ACTION_DIAL,uri)
+            startActivity(intent)
+        }
+
+        callBtn.setOnClickListener {
+            var num="01023232323"
+            val uri=Uri.parse("tel:${num}")
+            val intent=Intent(Intent.ACTION_CALL,uri)
             startActivity(intent)
         }
 
